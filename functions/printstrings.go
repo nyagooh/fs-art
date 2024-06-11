@@ -1,17 +1,20 @@
 package functions
 
-import "fmt"
+import (
+	"fmt"
+)
 
-func ProcessString(slice []int) []string {
+func ProcessString(slice []int, filename string) []string {
 	var results []string
 	var str string
 	for _, number := range slice {
-		str = Maps(number)
+		str = Maps(number, filename)
 		results = append(results, str)
 	}
-	fmt.Println(results)
+	// fmt.Println(results)
 	return results
 }
+
 // slice the string into chunks of eight depending on the number of letters passed.And print them
 func PrintStrings(str []string) {
 	chunksize := 8
@@ -32,10 +35,8 @@ func PrintStrings(str []string) {
 				fmt.Println()
 				j++
 				i = 0
-			}
-		}
-		break
+			}	
 	}
-
+	break
+	}
 }
-

@@ -3,15 +3,15 @@ package functions
 import (
 	"log"
 	"bufio"
-	"fmt"
+	// "fmt"
 	"os"
 )
 
 /*opens the required file,scans line by line and maps the line number to the strings found in the various
 lines in the opened file.
 */
-func Maps(n int) string {
-	file, err := os.Open(fmt.Sprintf("%s%s", os.Args[2], ".txt"))
+func Maps(n int,filename string) string {
+	file, err := os.Open(filename)
 	if err != nil {
 		log.Fatal(err)
 	}
