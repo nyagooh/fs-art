@@ -5,23 +5,50 @@ import (
 	"testing"
 )
 
-func TestProcessString(t *testing.T) {
+func TestPrintStrings(t *testing.T) {
+	tests := []struct {
+		name string
+		args []string
 
+	}{
+		{"h",
+		[]string{"_", "         ", "|   ", "|        ", "|   ", "| | __      ", "|    _  \\      ", "|   |   ", "|   | |   ", "|   |   ", "                   "},
+		 _      
+		| |     
+		| |__   
+		|  _ \  
+		| | | | 
+		|_| |_| 
+				
+				
+		
+	}
+	}
+	for _, tt := range tests {
+		t.Run(tt.name, func(t *testing.T) {
+			PrintStrings(tt.args)
+		})
+	}
+}
+
+func TestProcessString(t *testing.T) {
+	
 	tests := []struct {
 		name string
 		args []int
 		filename string
 		want []string
 	}{
-		{"h",
-		[]int{650, 651 ,652 ,653, 654, 655, 656, 657},
-		"standard.txt",
-		[]string{"_", "       ", "|", " ", "|", "      ", "|", " ", "|", "|", "__", "    ", "|", "  ", "_", " \\ ", "   ", "|", " ", "|", " ", "|", "|", " ", "|", "|", " ", "|", "                   "},
-	},
+		{
+			"h",
+			[]int{650, 651, 652, 653, 654, 655, 656, 657},
+			"standard.txt",
+			[]string{"_", "         ", "|   ", "|        ", "|   ", "| | __      ", "|    _  \\      ", "|   |   ", "|   | |   ", "|   |   ", "                   "},
+		},
 	}
 	for _, tt := range tests {
 		t.Run(tt.name, func(t *testing.T) {
-			if got := ProcessString(tt.args,tt.filename); !reflect.DeepEqual(got, tt.want) {
+			if got := ProcessString(tt.args, tt.filename); !reflect.DeepEqual(got, tt.want) {
 				t.Errorf("ProcessString() = %v, want %v", got, tt.want)
 			}
 		})
