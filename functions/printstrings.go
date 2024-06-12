@@ -11,7 +11,7 @@ func ProcessString(slice []int, filename string) []string {
 		str = Maps(number, filename)
 		results = append(results, str)
 	}
-	// fmt.Println(results)
+	fmt.Println(results)
 	return results
 }
 

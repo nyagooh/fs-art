@@ -9,7 +9,7 @@ import (
 	art "ascii/functions"
 )
 
-var banners = map[string]string{
+var templates = map[string]string{
 	"standard":   "standard.txt",
 	"thinkertoy": "thinkertoy.txt",
 	"shadow":     "shadow.txt",
@@ -17,8 +17,8 @@ var banners = map[string]string{
 
 func main() {
 	args := os.Args[1:]
-	if len(args) == 0 {
-		fmt.Println("no arguments passed")
+	if len(args) > 2 || len(args) == 0 {
+		fmt.Println("Usage: go run . [STRING] [BANNER]\n\nEX: go run . something standard")
 		return
 	}
 	if args[0] == "" {
@@ -34,13 +34,13 @@ func main() {
 	} else {
 		banner = "standard"
 	}
-	filename, ok := banners[banner]
-	if !ok {
-		log.Fatal("invalid banner file")
+	filename, open:= templates[banner]
+	if !open {
+		log.Fatal("invalid template file")
 	}
 	input := args[0]
 	 printable := art.NonPrintable(input)
-	lines := strings.Split(printable,"\ng")
+	lines := strings.Split(printable,"\n")
 	result := art.ProcessLine(lines)
 	result2 := art.ProcessString(result,filename)
 	art.PrintStrings(result2)
