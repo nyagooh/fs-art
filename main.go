@@ -34,15 +34,16 @@ func main() {
 	} else {
 		banner = "standard"
 	}
-	filename, open:= templates[banner]
+	filename, open := templates[banner]
 	if !open {
 		log.Fatal("invalid template file")
 	}
 	input := args[0]
-	 printable := art.NonPrintable(input)
-	lines := strings.Split(printable,"\n")
+	printable := art.NonPrintable(input)
+	lines := strings.Split(printable, "\n")
+	fmt.Println(lines)
 	result := art.ProcessLine(lines)
-	result2 := art.ProcessString(result,filename)
+	result2 := art.ProcessString(result, filename)
 	art.PrintStrings(result2)
-	fmt.Println()
+	// fmt.Println()
 }

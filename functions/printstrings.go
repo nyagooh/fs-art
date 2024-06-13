@@ -1,8 +1,6 @@
 package functions
 
-import (
-	"fmt"
-)
+import "fmt"
 
 func ProcessString(slice []int, filename string) []string {
 	var results []string
@@ -11,7 +9,7 @@ func ProcessString(slice []int, filename string) []string {
 		str = Maps(number, filename)
 		results = append(results, str)
 	}
-	fmt.Println(results)
+	// fmt.Println(results)
 	return results
 }
 
@@ -25,8 +23,8 @@ func PrintStrings(str []string) {
 			end = len(str)
 		}
 		result = append(result, str[i:end])
-		// fmt.Println(result)
 	}
+	fmt.Println(result)
 	for i := 0; i < len(result); {
 		for j := 0; j < 8; {
 			fmt.Print(result[i][j])
@@ -35,8 +33,8 @@ func PrintStrings(str []string) {
 				fmt.Println()
 				j++
 				i = 0
-			}	
-	}
-	break
+			}
+		}
+		break
 	}
 }
