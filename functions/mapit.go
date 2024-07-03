@@ -1,16 +1,16 @@
 package functions
 
 import (
-	"log"
 	"bufio"
-	// "fmt"
+	"log"
+
 	"os"
 )
 
 /*opens the required file,scans line by line and maps the line number to the strings found in the various
 lines in the opened file.
 */
-func Maps(n int,filename string) string {
+func Maps(n int, filename string) string {
 	file, err := os.Open(filename)
 	if err != nil {
 		log.Fatal(err)
@@ -26,7 +26,7 @@ func Maps(n int,filename string) string {
 			ascMap[count] = line
 			str = ascMap[n]
 		}
-	} 
+	}
 	if count == 0 {
 		log.Fatal("empty banner file")
 	}

@@ -9,11 +9,12 @@ func ProcessString(slice []int, filename string) []string {
 		str = Maps(number, filename)
 		results = append(results, str)
 	}
-	// fmt.Println(results)
+
 	return results
 }
 
 // slice the string into chunks of eight depending on the number of letters passed.And print them
+
 func PrintStrings(str []string) {
 	chunksize := 8
 	var result [][]string
@@ -24,7 +25,6 @@ func PrintStrings(str []string) {
 		}
 		result = append(result, str[i:end])
 	}
-	fmt.Println(result)
 	for i := 0; i < len(result); {
 		for j := 0; j < 8; {
 			fmt.Print(result[i][j])
@@ -37,4 +37,5 @@ func PrintStrings(str []string) {
 		}
 		break
 	}
+
 }
