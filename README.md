@@ -65,7 +65,7 @@ To install the program from Gitea, follow these steps:
 
 - Clone the repository from Gitea using the provided URL in your terminal.
 ``` bash
-git clone https://learn.zone01kisumu.ke/git/rogwel/ascii-art
+git clone https://github.com/nyagooh/fs-art.git
 ```
 Ensure you have Go installed on your system. If not you could follow the link below:
 ```bash
@@ -92,14 +92,6 @@ The program will output :
                                                                       
                                                                       
 ```
-## <span style = "color: #80A4ED">Files featured</span>
-The program works with 3 potent files:
-
- 1. standard.txt
- 2. shadow.txt
- 3. thinkertoy.txt
- - The default file used is standard textual file.
-
  ## <span style="color:#80A4ED">The Final Stretch</span>
 
 I hope you've found the information helpful in getting started with our project.Don't hesitate to reach out if you have any questions or for pull requests.
@@ -111,8 +103,6 @@ Happy coding!😊
 
 - _*Contributors*_
    - [Nyagoh](https://github.com/nyagooh)
-   - [Rogwel](https://github.com/anxielray)
-   - [Allan  Kamau](https://github.com/allankamau)
    
 
 
